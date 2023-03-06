@@ -17,10 +17,11 @@ export type Options = {
    * @default MSK_IAM
    */
   userAgent?: string;
+  // awhittier: Changed from credentials? (optional) to credentials (required)
   /**
-   * @default fromNodeProviderChain()
+   * Credential provider.
    */
-  credentials?: AwsCredentialIdentity | Provider<AwsCredentialIdentity>;
+  credentials: AwsCredentialIdentity | Provider<AwsCredentialIdentity>;
 };
 
 export const createMechanism = (
